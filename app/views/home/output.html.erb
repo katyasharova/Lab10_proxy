@@ -1,0 +1,20 @@
+<div class="form-io">
+    <% if @arr.to_a.empty? %>
+        <b>Ошибка ввода</b><br>
+    <%else%>
+        <h2>Результат</h2>
+        <table>
+            <tr>
+                <th>Число</th>
+                <th>Квадрат</th>
+            </tr>
+            <% @arr.each do |num| %>
+                <tr>
+                    <td><%= num %></td>
+                    <td><%= num**2 %></td>
+                </tr>
+            <% end %>
+        </table>
+    <%end%>
+    <%= link_to '<button class="button">Назад</button>'.html_safe, input_path  %>
+</div>
